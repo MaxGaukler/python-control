@@ -181,9 +181,6 @@ class StateSpace(LTI):
         if self.outputs != C.shape[0]:
             raise ValueError("C and D must have the same number of rows.")
 
-        # Check for states that don't do anything, and remove them.
-        self._remove_useless_states()
-
     def _remove_useless_states(self):
         """Check for states that don't do anything, and remove them.
 
